@@ -47,40 +47,62 @@ export default function SectorsSection() {
         </motion.h2>
 
         {/* SECTOR CARDS */}
-        <div className="
-          mt-8 md:mt-10
-          grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5
-          gap-3 md:gap-4
-        ">
-          {sectors.map((sector, i) => {
-            const Icon = sector.icon;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                whileHover={{ y: -4 }}
-                className="
-                  bg-white rounded-xl
-                  px-3 py-5 md:py-8
-                  flex flex-col items-center justify-center
-                  gap-2 text-center
-                  shadow-sm hover:shadow-md transition
-                "
-              >
-                <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#001388]" />
+        <div className="mt-8 md:mt-10 relative overflow-hidden">
+          {/* FADE EDGES */}
+          <div className="absolute left-0 top-0 h-full w-10 md:w-16 bg-gradient-to-r from-[#eef1f6] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-10 md:w-16 bg-gradient-to-l from-[#eef1f6] to-transparent z-10 pointer-events-none" />
 
-                <p className="
-                  text-[12px] md:text-sm
-                  font-medium text-gray-700
-                  leading-tight
-                ">
-                  {sector.label}
-                </p>
-              </motion.div>
-            );
-          })}
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 22,
+              ease: "linear",
+            }}
+            className="flex gap-3 md:gap-4 w-max"
+          >
+            {[...sectors, ...sectors].map((sector, i) => {
+              const Icon = sector.icon;
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: (i % sectors.length) * 0.05 }}
+                  whileHover={{
+                    y: -4,
+                    transition: { duration: 0.2 },
+                  }}
+                  className="
+                    min-w-[180px]
+                    sm:min-w-[220px]
+                    md:min-w-[230px]
+                    lg:min-w-[240px]
+                    bg-white rounded-xl
+                    px-4 py-5 md:px-3 md:py-8
+                    flex flex-col items-center justify-center
+                    gap-2 text-center
+                    shadow-sm hover:shadow-md
+                    transition
+                    flex-shrink-0
+                  "
+                >
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#001388]" />
+
+                  <p
+                    className="
+                      text-[12px] md:text-sm
+                      font-medium text-gray-700
+                      leading-tight
+                    "
+                  >
+                    {sector.label}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
 
         {/* BEFORE / AFTER */}

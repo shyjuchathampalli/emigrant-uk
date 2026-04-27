@@ -56,9 +56,9 @@ export default function ProblemSection() {
             <Image
               src="/uergent-alert.png"
               alt="alerts"
-              width={320}
-              height={240}
-              className="rounded-xl w-full max-w-[300px]"
+              width={424}
+              height={285}
+              className="rounded-xl w-full max-w-[424px]"
             />
           </motion.div>
         </div>

@@ -79,31 +79,46 @@ export default function TrustSection() {
 
         {/* AWARDS */}
         <div className="mt-14">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="flex flex-wrap justify-center items-end gap-10 md:gap-14"
-          >
-            {awards.map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-                whileHover={{ scale: 1.08 }}
-                className="flex items-end"
-              >
-                <Image
-                  src={img}
-                  alt="award"
-                  width={110}
-                  height={130}
-                  className="object-contain"
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="
+            w-full
+            flex
+            flex-wrap
+            justify-between
+            items-end
+            gap-y-8
+            px-0
+          "
+        >
+          {awards.map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.05 }}
+              whileHover={{
+                scale: 1.08,
+                transition: { duration: 0.2 },
+              }}
+              className="
+                flex items-end justify-center
+                flex-shrink-0
+              "
+            >
+              <Image
+                src={img}
+                alt="award"
+                width={120}
+                height={138}
+                className="object-contain"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
 
       </div>
     </section>

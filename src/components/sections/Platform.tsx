@@ -36,15 +36,14 @@ export default function Platform() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto"
+          className="text-center max-w-3xl mx-auto"
         >
           <p className="text-xs tracking-widest text-blue-500 uppercase">
             — The Platform
           </p>
 
-          <h2 className="font-sora text-3xl md:text-5xl font-semibold mt-3 leading-tight">
-            Everything your compliance <br />
-            needs. In one place
+          <h2 className="font-sora text-3xl md:text-5xl font-semibold mt-3">
+            Everything your compliance needs. In one place
           </h2>
 
           <p className="text-gray-600 mt-4 text-sm md:text-base">
@@ -55,80 +54,87 @@ export default function Platform() {
 
         {/* HERO CARD */}
         <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="mt-16 rounded-3xl bg-[#E8ECFF] px-8 md:px-12 pt-10 pb-0 grid lg:grid-cols-2 gap-10 items-center relative overflow-hidden min-h-[420px]"
-            >
-            {/* LEFT CONTENT */}
-            <div className="z-10 pb-10">
-                <h3 className="font-sora text-2xl md:text-3xl font-semibold">
-                Compliance Command Centre
-                </h3>
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="
+            mt-16 rounded-3xl bg-[#E8ECFF]
+            pt-8 md:pt-10
+            pl-5 sm:pl-6 md:pl-12
+            pb-0
+            grid grid-cols-1 lg:grid-cols-2
+            gap-6 lg:gap-0
+            items-center
+            relative overflow-hidden
+            min-h-auto lg:min-h-[460px]
+          "
+        >
+          {/* LEFT CONTENT */}
+          <div className="z-10 self-start pt-1 md:pt-4 lg:pt-6 pb-0 sm:pb-2 lg:pb-12 pr-5 sm:pr-6 lg:pr-16">
+            <h3 className="font-sora text-3xl sm:text-4xl md:text-2xl lg:text-3xl font-semibold leading-tight text-[#0F172A]">
+              Compliance Command Centre
+            </h3>
 
-                <p className="text-gray-600 mt-3 max-w-md">
-                Real-time health score and daily action list across your sponsored workforce
-                </p>
+            <p className="text-gray-600 mt-4 max-w-md leading-relaxed text-base sm:text-lg">
+              Real-time health score and daily action list across your sponsored workforce
+            </p>
 
-                <button className="font-sora mt-5 px-4 py-2 rounded-md border border-[#001388] text-[#001388] hover:bg-[#001388] hover:text-white transition">
-                Learn More
-                </button>
+            <button className="font-sora mt-6 px-5 py-2.5 rounded-md border border-[#001388] text-[#001388] hover:bg-[#001388] hover:text-white transition">
+              Learn More
+            </button>
+          </div>
+
+          {/* RIGHT VISUAL */}
+          <div
+          className="
+            relative
+            w-full
+            flex justify-center lg:justify-end
+            items-end
+            min-h-[180px] sm:min-h-[260px] md:min-h-[420px] lg:min-h-[460px]
+            -mt-4 sm:-mt-2 lg:mt-0
+          "
+        >
+            {/* MOBILE / TABLET — FULL IMAGE VISIBLE */}
+            <div className="relative w-full flex justify-center lg:hidden px-2 sm:px-4">
+              <Image
+                src="/Hero-Compliance.png"
+                alt="Compliance dashboard"
+                width={1238}
+                height={778}
+                priority
+                className="
+                  w-full
+                  h-auto
+                  max-w-[640px]
+                  object-contain
+                  object-center
+                  select-none
+                "
+              />
             </div>
 
-            {/* RIGHT VISUAL */}
-            <div className="relative h-full flex items-end justify-end">
-
-                {/* MAIN IMAGE — PERFECT ALIGN */}
-                <div className="absolute bottom-0 right-[-2rem] md:right-[-3rem] w-[90%] md:w-[75%] h-[320px] md:h-[380px]">
-                    <Image
-                    src="/platform-screen1.png"
-                    alt="platform"
-                    fill
-                    className="object-cover object-bottom rounded-2xl shadow-xl"
-                    />
-                </div>
-
-                {/* TOP RIGHT CARD */}
-                <div className="absolute top-0 right-6 bg-white rounded-xl shadow-md px-4 py-3 w-44">
-                <p className="text-xs text-gray-500">COS EXPIRY RISK</p>
-                <p className="font-sora font-semibold text-lg">Medium</p>
-
-                <div className="flex gap-1 mt-2">
-                    <div className="h-1 w-6 bg-orange-400 rounded" />
-                    <div className="h-1 w-6 bg-orange-400 rounded" />
-                    <div className="h-1 w-6 bg-orange-400 rounded" />
-                    <div className="h-1 w-6 bg-gray-200 rounded" />
-                </div>
-
-                <p className="text-xs text-orange-500 mt-1">
-                    2 expiring within 60 days
-                </p>
-                </div>
-
-                {/* HEALTH SCORE CARD (CENTER LEFT OF IMAGE) */}
-                <div className="absolute left-0 bottom-[140px] bg-white rounded-xl shadow-lg px-5 py-4 w-52">
-                <p className="text-xs text-gray-500">COMPLIANCE HEALTH SCORE</p>
-
-                <div className="flex items-center justify-between mt-2">
-                    <p className="font-sora text-2xl font-semibold text-green-600">94%</p>
-                    <p className="text-xs text-green-500">+2.4%</p>
-                </div>
-
-                <p className="text-xs text-gray-400 mt-1">
-                    Across all active jurisdictions
-                </p>
-                </div>
-
-                {/* COST CARD (BOTTOM CENTER) */}
-                <div className="absolute left-8 bottom-4 bg-white rounded-xl shadow-md px-5 py-3 w-52">
-                <p className="text-xs text-gray-500">RENEWAL COST PROJECTION</p>
-                <p className="font-sora font-semibold text-lg mt-1">£14,200</p>
-                <p className="text-xs text-gray-400">Est. for Q3</p>
-                </div>
-
+            {/* DESKTOP — KEEP CURRENT FIGMA STYLE */}
+            <div className="hidden lg:flex absolute right-0 bottom-0 h-full w-auto items-end justify-end">
+              <Image
+                src="/Hero-Compliance.png"
+                alt="Compliance dashboard"
+                width={1238}
+                height={778}
+                priority
+                className="
+                  h-full
+                  w-auto
+                  max-w-none
+                  object-contain
+                  object-right-bottom
+                  select-none
+                "
+              />
             </div>
-            </motion.div>
+          </div>
+        </motion.div>
 
         {/* GRID */}
         <motion.div
@@ -141,19 +147,19 @@ export default function Platform() {
           <FeatureCard
             title="CoS Expiry Management"
             desc="Automated alerts at 90, 60, 30 days before every visa and CoS end date"
-            img="/platform-screen2.png"
+            img="/platform-screen-2.png"
           />
 
           <FeatureCard
             title="SOC Salary Intelligence"
             desc="Rule engine validates every salary against SOC code minimums before UKVI does"
-            img="/platform-screen3.png"
+            img="/platform-screen-3.png"
           />
 
           <FeatureCard
             title="SMS Reporting"
             desc="Automated reporting obligations change of circumstances, absences, salary changes"
-            img="/platform-screen4.png"
+            img="/platform-screen-4.png"
           />
 
           <FeatureCard
