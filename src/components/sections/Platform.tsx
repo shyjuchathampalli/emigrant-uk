@@ -99,7 +99,7 @@ export default function Platform() {
             {/* MOBILE / TABLET — FULL IMAGE VISIBLE */}
             <div className="relative w-full flex justify-center lg:hidden px-2 sm:px-4">
               <Image
-                src="/Hero-Compliance.png"
+                src="/Hero-compliance.png"
                 alt="Compliance dashboard"
                 width={1238}
                 height={778}
@@ -165,7 +165,7 @@ export default function Platform() {
           <FeatureCard
             title="Document Vault"
             desc="Encrypted storage for all worker documents with expiry tracking built in"
-            img="/platform-screen5.png"
+            img="/platform-screen-5.png"
           />
         </motion.div>
       </div>
