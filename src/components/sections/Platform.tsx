@@ -118,7 +118,7 @@ export default function Platform() {
             {/* DESKTOP — KEEP CURRENT FIGMA STYLE */}
             <div className="hidden lg:flex absolute right-0 bottom-0 h-full w-auto items-end justify-end">
               <Image
-                src="/Hero-Compliance.png"
+                src="/Hero-compliance.png"
                 alt="Compliance dashboard"
                 width={1238}
                 height={778}
