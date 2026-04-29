@@ -29,7 +29,7 @@ const afterList = [
 
 export default function SectorsSection() {
   return (
-    <section className="bg-[#eef1f6] py-16 md:py-20 px-6">
+    <section className="bg-[#E8ECFF] py-16 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* HEADING */}

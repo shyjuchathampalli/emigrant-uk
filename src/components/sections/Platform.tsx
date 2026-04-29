@@ -147,25 +147,33 @@ export default function Platform() {
           <FeatureCard
             title="CoS Expiry Management"
             desc="Automated alerts at 90, 60, 30 days before every visa and CoS end date"
-            img="/platform-screen-2.png"
+            img="/platform-screen1.png"
+            width={1263}
+            height={801}
           />
 
           <FeatureCard
             title="SOC Salary Intelligence"
             desc="Rule engine validates every salary against SOC code minimums before UKVI does"
-            img="/platform-screen-3.png"
+            img="/platform-screen3.png"
+            width={1506}
+            height={864}
           />
 
           <FeatureCard
             title="SMS Reporting"
             desc="Automated reporting obligations change of circumstances, absences, salary changes"
-            img="/platform-screen-4.png"
+            img="/platform-screen4.png"
+             width={1182}
+            height={753}
           />
 
           <FeatureCard
             title="Document Vault"
             desc="Encrypted storage for all worker documents with expiry tracking built in"
-            img="/platform-screen-5.png"
+            img="/platform-screen5.png"
+            width={1359}    
+            height={894}
           />
         </motion.div>
       </div>
@@ -174,7 +182,7 @@ export default function Platform() {
 }
 
 /* REUSABLE CARD */
-function FeatureCard({ title, desc, img }: any) {
+function FeatureCard({ title, desc, img, width, height }: any) {
   return (
     <motion.div
       variants={fadeUp}
@@ -202,9 +210,12 @@ function FeatureCard({ title, desc, img }: any) {
         <Image
             src={img}
             alt={title}
-            width={500}
-            height={300}
-            className="w-full h-auto object-cover"
+            width={width}
+            height={height}
+            quality={100}
+            sizes="(max-width: 768px) 80vw, (max-width: 1200px) 45vw, 38vw"
+            className="w-full h-auto object-contain select-none"
+            style={{ imageRendering: "auto" }}
         />
 
         {/* GRADIENT OVERLAY */}

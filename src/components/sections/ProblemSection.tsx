@@ -24,7 +24,7 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="bg-[#eef1f6] text-[#0f172a] py-16 md:py-24">
+    <section className="bg-[#E8ECFF] text-[#0f172a] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
 
         {/* LEFT */}

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ParticleBackground from "@/components/ui/Particles";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -18,17 +17,27 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0f2a5c] text-white">
 
-      {/* PARTICLES → ONLY DESKTOP */}
-      {!isMobile && <ParticleBackground />}
+      <div
+        className="absolute inset-0 z-0 opacity-100"
+        style={{
+          backgroundImage: "url('/grid-vector.png')",
+          backgroundRepeat: "repeat-x",
+          backgroundSize: "520px auto",
+          backgroundPosition: "top center",
+        }}
+      />
+
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-[#0f2a5c]" />
+
 
       {/* GRADIENT */}
       <div className="absolute inset-0 z-5 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.08),transparent_40%)]" />
 
       {/* CONTENT */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 
-                      pt-20 pb-16 
-                      md:py-24 
-                      grid md:grid-cols-2 gap-12 items-center">
+                pt-28 pb-16
+                md:pt-36 md:pb-24
+                grid md:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-2 items-start">
 
         {/* LEFT */}
         <motion.div
@@ -62,7 +71,7 @@ export default function Hero() {
           {/* CTA */}
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="bg-red-500 hover:bg-red-600 
+            className="font-sora bg-red-500 hover:bg-red-600 
                        px-6 py-3 rounded-xl shadow-lg 
                        text-sm md:text-base"
           >
@@ -72,38 +81,47 @@ export default function Hero() {
 
         {/* RIGHT */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex justify-center md:block"
+          className="
+            relative
+            w-full
+            flex
+            justify-end
+            mt-8 md:mt-0
+          "
         >
-          {/* MAIN IMAGE */}
-          <div className="rounded-2xl overflow-hidden shadow-2xl w-full max-w-md md:max-w-none">
-            <Image
-              src="/hero-screen.png"
-              alt="dashboard"
-              width={900}
-              height={600}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-
-          {/* FLOATING CARD → ONLY DESKTOP */}
-          {!isMobile && (
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -bottom-10 left-10 bg-white rounded-xl shadow-xl p-4 w-64"
-            >
+          {/* MAIN DASHBOARD */}
+          <div
+            className="
+              relative
+              w-[130%]
+              max-w-none
+              flex
+              justify-end
+              md:translate-x-8
+              lg:translate-x-12
+              xl:translate-x-36
+            "
+          >
+            <div className="relative w-full max-w-[980px]">
               <Image
-                src="/hero-screen2.png"
-                alt="score"
-                width={250}
-                height={200}
+                src="/hero-screen-stat.png"
+                alt="dashboard"
+                width={2316}
+                height={1716}
+                className="
+                  w-full
+                  h-auto
+                  object-contain
+                  drop-shadow-2xl
+                "
+                priority
               />
-            </motion.div>
-          )}
+
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

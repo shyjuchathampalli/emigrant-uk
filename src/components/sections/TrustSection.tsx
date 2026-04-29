@@ -19,12 +19,12 @@ const ratings = [
 ];
 
 const awards = [
-  "/momentum-leader.png",
-  "/regional-leader.png",
-  "/fast-implementation.png",
-  "/fast-company.png",
-  "/high-performer.png",
-  "/leader.png",
+  "/momentumLeader.png",
+  "/regionalLeader.png",
+  "/fastImplementation.png",
+  "/fastCompany.png",
+  "/highPerformer.png",
+  "/Leader.png",
 ];
 
 export default function TrustSection() {
@@ -43,7 +43,7 @@ export default function TrustSection() {
               viewport={{ once: true }}
               whileHover={{ y: -4 }}
               className="
-                bg-[#eef1f6]
+                bg-[#E8ECFF]
                 rounded-2xl
                 border border-gray-200
                 py-8 px-6

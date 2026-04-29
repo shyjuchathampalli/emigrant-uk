@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence  } from "framer-motion";
+import EmigrantLogo from "./EmigrantLogo";
 
 const navItems = [
   { label: "Why eMigrant", href: "#" },
@@ -45,13 +46,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/emigrant-logo.png"
-            alt="eMigrant"
-            width={140}
-            height={40}
-            priority
-          />
+          <EmigrantLogo />
         </Link>
 
         {/* CENTER NAV (GLASS PILL) */}
@@ -74,7 +69,7 @@ export default function Navbar() {
           
           <Link
             href="#"
-            className="hidden md:block text-sm text-white/70 hover:text-white transition"
+            className="font-sora hidden md:block text-sm text-white/70 hover:text-white transition"
           >
             Login
           </Link>
@@ -82,7 +77,7 @@ export default function Navbar() {
           <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="hidden md:block bg-[#ff2d2d] hover:bg-[#e02626] text-white px-5 py-2 rounded-full text-sm font-medium shadow-lg"
+              className="font-sora hidden md:block bg-[#ff2d2d] hover:bg-[#e02626] text-white px-5 py-2 rounded-[8px] text-sm font-medium shadow-lg"
             >
               Book A Demo
             </motion.button>
