@@ -24,7 +24,7 @@ const awards = [
   "/fastImplementation.png",
   "/fastCompany.png",
   "/highPerformer.png",
-  "/Leader.png",
+  "/LeaderEnterprise.png",
 ];
 
 export default function TrustSection() {
