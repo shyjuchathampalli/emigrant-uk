@@ -96,7 +96,7 @@ function LogoItem({
   // Screen center for opacity highlight
   const centerPoint = 680;
 
-  const distance = useTransform(x, (latest) => {
+  const distance = useTransform(x, (latest: number) => {
     const itemCenter = index * step + step / 2 + latest;
     return Math.abs(centerPoint - itemCenter);
   });
