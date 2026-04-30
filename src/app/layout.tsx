@@ -4,6 +4,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 
+import { DemoProvider } from "@/context/DemoContext";
+import CalendlyDrawer from "@/components/CalendlyDrawer";
+
 export default function RootLayout({
   children,
 }: {
@@ -12,6 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
       <body className="bg-[#0f2a5c] text-white relative">
+
+        <DemoProvider>
 
         {/* GLOBAL GRID BACKGROUND */}
         <div
@@ -29,6 +34,12 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+
+        {/* Calendly */}
+
+          <CalendlyDrawer />
+          
+        </DemoProvider>
       </body>
     </html>
   );

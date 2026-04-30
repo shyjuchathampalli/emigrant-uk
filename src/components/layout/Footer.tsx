@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import EmigrantLogo from "./EmigrantLogo";
+import DemoButtonWhite from "@/components/DemoButtonWhite";
 
 export default function Footer() {
   return (
@@ -53,21 +54,10 @@ export default function Footer() {
             </h3>
 
             {/* CTA BUTTON */}
-            <button
-              className="
-                bg-white text-[#13285D]
-                px-6 py-3
-                md:px-7 md:py-3.5
-                rounded-lg md:rounded-xl
-                font-medium
-                text-base md:text-lg
-                whitespace-nowrap
-                hover:scale-105
-                transition
-              "
-            >
-              Book Your Demo
-            </button>
+            <DemoButtonWhite>
+                          Book Demo
+                      </DemoButtonWhite>
+
           </motion.div>
         </div>
       </section>

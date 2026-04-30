@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import LearnMoreButton from "../LearnMoreButton";
+import LearnMoreLargeButton from "../LearnMoreLargeButton";
 
 const container = {
   hidden: {},
@@ -80,9 +82,9 @@ export default function Platform() {
               Real-time health score and daily action list across your sponsored workforce
             </p>
 
-            <button className="font-sora mt-6 px-5 py-2.5 rounded-md border border-[#001388] text-[#001388] hover:bg-[#001388] hover:text-white transition">
+            <LearnMoreLargeButton>
               Learn More
-            </button>
+            </LearnMoreLargeButton>
           </div>
 
           {/* RIGHT VISUAL */}
@@ -196,9 +198,9 @@ function FeatureCard({ title, desc, img, width, height }: any) {
             {desc}
         </p>
 
-        <button className="font-sora font-semibold mt-4 px-3 py-1.5 text-sm border border-[#001388] text-[#001388] rounded-md group-hover:bg-[#001388] group-hover:text-white transition">
+        <LearnMoreButton>
             Learn More
-        </button>
+        </LearnMoreButton>
         </div>
 
       {/* IMAGE */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import PricingButton from "@/components/PricingButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -152,19 +153,9 @@ export default function PricingSection() {
               </ul>
 
               {/* CTA */}
-              <motion.button
-                whileTap={{ scale: 0.97 }}
-                whileHover={{ scale: 1.02 }}
-                className={`mt-8 w-full py-3 rounded-xl font-medium transition
-                  ${
-                    plan.featured
-                      ? "bg-[#13279E] text-white shadow-lg hover:bg-blue-800"
-                      : "border-2 border-[#00020E] text-[#00020E] hover:bg-gray-100"
-                  }
-                `}
-              >
+              <PricingButton featured={plan.featured}>
                 {plan.cta}
-              </motion.button>
+              </PricingButton>
             </motion.div>
           ))}
         </div>

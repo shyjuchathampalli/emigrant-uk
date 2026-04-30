@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence  } from "framer-motion";
 import EmigrantLogo from "./EmigrantLogo";
+import DemoButton from "@/components/DemoButton";
 
 const navItems = [
   { label: "Why eMigrant", href: "#" },
@@ -74,13 +75,9 @@ export default function Navbar() {
             Login
           </Link>
 
-          <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="font-sora hidden md:block bg-[#ff2d2d] hover:bg-[#e02626] text-white px-5 py-2 rounded-[8px] text-sm font-medium shadow-lg"
-            >
-              Book A Demo
-            </motion.button>
+            <DemoButton>
+              Book Demo
+            </DemoButton>
 
           {/* HAMBURGER BUTTON */}
             <button
