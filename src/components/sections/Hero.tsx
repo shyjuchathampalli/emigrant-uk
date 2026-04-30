@@ -18,12 +18,22 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-[#0f2a5c] text-white">
 
       <div
-        className="absolute inset-0 z-0 opacity-100"
+        className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/grid-vector.png')",
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              rgba(19,39,158,0.72) 0%,
+              rgba(16,40,114,0.52) 22%,
+              rgba(15,42,92,0.38) 48%,
+              rgba(15,42,92,0.18) 72%,
+              rgba(15,42,92,0.08) 100%
+            ),
+            url('/grid-vector.png')
+          `,
           backgroundRepeat: "repeat-x",
-          backgroundSize: "520px auto",
-          backgroundPosition: "top center",
+          backgroundSize: "100% 100%, 520px auto",
+          backgroundPosition: "top center, top center",
         }}
       />
 
