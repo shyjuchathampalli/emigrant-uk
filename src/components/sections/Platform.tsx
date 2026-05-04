@@ -29,7 +29,7 @@ const fadeUp = {
 
 export default function Platform() {
   return (
-    <section className="bg-[#ffffff] py-24 text-[#0f172a]">
+    <section id="features" className="bg-[#ffffff] py-24 text-[#0f172a]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}

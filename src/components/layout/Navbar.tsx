@@ -8,10 +8,9 @@ import EmigrantLogo from "./EmigrantLogo";
 import DemoButton from "@/components/DemoButton";
 
 const navItems = [
-  { label: "Why eMigrant", href: "#" },
-  { label: "Solution", href: "#" },
-  { label: "Features", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Why eMigrant", href: "#emigrant" },
+  { label: "Features", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
 ];
 
 export default function Navbar() {
@@ -124,9 +123,9 @@ export default function Navbar() {
                 </Link>
 
                 {/* CTA */}
-                <button className="bg-[#ff2d2d] text-white py-2.5 rounded-full text-sm font-medium mt-2">
-                  Book A Demo
-                </button>
+                <DemoButton>
+              Book Demo
+            </DemoButton>
 
               </div>
             </motion.div>
