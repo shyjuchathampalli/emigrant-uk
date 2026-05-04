@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0E0F26] text-white relative">
       {/* CTA SECTION */}
-      <section className="bg-[#E8ECFF] pt-2 pb-0 mb-10 md:mb-16">
+      <section className="bg-[#ffffff] pt-2 pb-0 mb-10 md:mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 40 }}

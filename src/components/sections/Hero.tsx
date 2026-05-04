@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto px-6 
                 pt-28 pb-16
                 md:pt-36 md:pb-24
-                grid md:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-2 items-start">
+                grid md:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-2 items-start" style={{ paddingTop: "220px", paddingBottom: "180px" }}>
 
         {/* LEFT */}
         <motion.div
