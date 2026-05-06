@@ -79,7 +79,7 @@ export default function PricingSection() {
           </p>
 
           <h2 className="font-sora text-[#191C1E] text-3xl md:text-5xl font-semibold mt-4 max-w-3xl mx-auto">
-            One UKVI fine costs more than a year of eMigrant.
+            Stay Compliant. Stay Protected. Stay Affordable
           </h2>
 
           <p className="text-gray-500 mt-4">
@@ -168,9 +168,7 @@ export default function PricingSection() {
           className="mt-14 max-w-3xl mx-auto"
         >
           <div className="bg-yellow-50 border border-yellow-200 text-sm text-gray-700 px-6 py-4 rounded-xl">
-            A single Home Office civil penalty starts at £1,000 per worker.
-            A licence revocation costs £5,000–£15,000 to recover from.
-            eMigrant’s annual cost is a fraction of a single compliance failure.
+            A single civil penalty starts at £1,000 per worker. A licence revocation costs £5,000–£15,000 to recover from. e-migrant's annual cost is a fraction of a single compliance failure.
           </div>
         </motion.div>
       </div>

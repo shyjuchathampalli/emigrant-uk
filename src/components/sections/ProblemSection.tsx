@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const problems = [
   {
     title: "Missing RTW documents",
-    desc: "Manual filing leads to gaps in Right to Work evidence that Home Office inspectors target first.",
+    desc: "Manual filing leads to gaps in Right to Work evidence that compliance auditors look for first.",
   },
   {
     title: "Scattered employee records",
@@ -42,7 +42,7 @@ export default function ProblemSection() {
           </h2>
 
           <p className="text-gray-600 text-sm md:text-base max-w-md mx-auto md:mx-0">
-            The Home Office doesn't send warnings. They send auditors. And by the time the letter arrives, the damage is already done.
+            Auditors don't schedule appointments. They show up unannounced. And by the time they find a gap, your licence is already at risk.
           </p>
 
           {/* ALERT CARD */}

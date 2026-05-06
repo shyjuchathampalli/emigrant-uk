@@ -24,7 +24,7 @@ const afterList = [
   "Automated alerts at 90, 60, and 30 days before any deadline",
   "SOC salary intelligence flags mismatches the day they happen",
   "The whole team has visibility, nobody carries it alone",
-  "A Home Office visit is just another working day",
+  "A compliance audit is just another working day.",
 ];
 
 export default function SectorsSection() {
